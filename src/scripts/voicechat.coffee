@@ -8,17 +8,30 @@
 #   None
 #
 # Configuration:
-#   None
+#   HUBOT_VOICECHAT_HOST - (optional) The base URL of a self-hosted instance of the Voice Chat API.
+#   HUBOT_VOICECHAT_EXPIRE_CONFERENCE - (optional) True if conference is set to expire after 24 hours of inactivity
 #
 # Commands:
 #   hubot conference - create an audio conference room.
 #
 # Author:
 #   DHfromKorea <dh@dhfromkorea.com>
-
 module.exports = (robot) ->
-  robot.respond /conference/i, (msg) ->
-    msg.http('http://www.voicechatapi.com/api/v1/conference/')
-       .post() (err, res, body) ->
-         json = JSON.parse(body)
-         msg.send "Your conference room: #{json.conference_url} \n*This room will be automatically removed after 24 hours. More info on www.voicechatapi.com"
+  url = "http://www.voicechatapi.com"
+  purgeMessage = ""
+
+  if process.env.HUBOT_VOICECHAT_HOST?
+    url = process.env.HUBOT_VOICECHAT_HOST
+  
+  if not process.env.HUBOT_VOICECHAT_EXPIRE_CONFERENCE? or process.env.HUBOT_VOICECHAT_EXPIRE_CONFERENCE is true
+    purgeMessage = " \n*This room will be automatically removed after 24 hours. More info at #{url}"
+
+  robot.respond /conference|voicechat/i, (msg) ->
+    msg.http("#{url}/api/v1/conference/")
+      .post() (err, res, body) ->
+        if not err and res.statusCode is 200
+          json = JSON.parse(body)
+          msg.send "Your conference room: #{json.conference_url}#{purgeMessage}"
+        else
+          robot.logger.error "Unable to create conference at #{url}", err, res
+          msg.send "Sorry, but I was unable to create a conference for you."
