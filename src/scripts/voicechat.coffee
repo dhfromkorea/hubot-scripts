@@ -9,13 +9,13 @@
 #
 # Configuration:
 #   HUBOT_VOICECHAT_HOST - (optional) The base URL of a self-hosted instance of the Voice Chat API.
-#   HUBOT_VOICECHAT_EXPIRE_CONFERENCE - (optional) True if conference is set to expire after 24 hours of inactivity
+#   HUBOT_VOICECHAT_EXPIRE_CONFERENCE - (optional) True if conference is set to expire after 24 hours since its creation.
 #
 # Commands:
 #   hubot conference - create an audio conference room.
 #
 # Author:
-#   DHfromKorea <dh@dhfromkorea.com>
+#   DHfromKorea <dhllee424@gmail.com>
 module.exports = (robot) ->
   url = "http://www.voicechatapi.com"
   purgeMessage = ""
