@@ -1,6 +1,7 @@
-## Description: 
-Voice Chat API is an open-source audio conferencing app exposed via an API. This Hubot script makes a POST request to return the URL of a conference room where you can do a simple WebRTC-powered voice calls in browsers. Using this script you can integrate audio conferencing into your own chatting apps like Campfire, Hipchat or Flowdock among many others. The room will last for the next 24 hours. Learn more on http://VoiceChatAPI.com.
+## Description
+Voice Chat API is an open-source audio conferencing app exposed via an API.
 
+This Hubot script makes a POST request to return the URL of a conference room where you can do a simple WebRTC-powered voice calls in browsers. Using this script you can integrate audio conferencing into your own chatting apps like Campfire, Hipchat or Flowdock among many others. The room will last for the next 24 hours. Learn more on [Voice Chat API](http://VoiceChatAPI.com).
 
 
 ## Configuration & Commands
@@ -11,7 +12,7 @@ hubot conference - create an audio conference room.
 hubot voicechat - create an audio conference room. (whichever you prefer)
 
 
-## Setting up:
+## Setting up
 
 You will need [node.js](http://nodejs.org/) and [npm](https://npmjs.org/). Joyent has
 an [excellent blog post on how to get those installed](http://joyent.com/blog/installing-node-and-npm), so we'll omit those details here.
