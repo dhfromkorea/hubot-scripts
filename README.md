@@ -2,16 +2,13 @@
 Voice Chat API is an open-source audio conferencing app exposed via an API. This Hubot script makes a POST request to return the URL of a conference room where you can do a simple WebRTC-powered voice calls in browsers. Using this script you can integrate audio conferencing into your own chatting apps like Campfire, Hipchat or Flowdock among many others. The room will last for the next 24 hours. Learn more on http://VoiceChatAPI.com.
 
 
-## What you can do:
 
-
-# Configuration:
+## Configuration & Commands
 HUBOT_VOICECHAT_HOST - (optional) The base URL of a self-hosted instance of the Voice Chat API.
 HUBOT_VOICECHAT_EXPIRE_CONFERENCE - (optional) True if conference is set to expire after 24 hours since its creation.
 
-
-# Commands:
 hubot conference - create an audio conference room.
+hubot voicechat - create an audio conference room. (whichever you prefer)
 
 
 ## Setting up:
