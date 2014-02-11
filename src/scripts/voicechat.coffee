@@ -1,6 +1,6 @@
 Description:
 #   Voice Chat API is an open-source audio conferencing app exposed via an API.
-#   This plugin makes a POST request to fetch the UR of a conference room where you can do a simple
+#   This plugin makes a POST request to fetch the URL of a conference room where you can do a simple
 #   WebRTC-powered voice calls in browsers. The room will last for the next 24
 #   hours. Learn more on http://VoiceChatAPI.com
 #
