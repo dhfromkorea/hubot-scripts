@@ -1,19 +1,20 @@
 {
   "name": "hubot-voicechat",
-  "version": "1.0.0",
+  "version": "1.0.1",
 
-  "author": "hubot",
+  "author": "dhfromkorea",
 
   "keywords": [
     "hubot",
-    "plugin",
-    "scripts",
-    "campfire",
-    "bot",
-    "robot"
+    "audio conference",
+    "voice chat",
+    "plivo",
+    "chat",
+    "voice call",
+    "plugin"
   ],
 
-  "description": "Allows you to opt in to a variety of scripts",
+  "description": "create an ad-hoc audio conference room",
 
   "licenses": [{
     "type": "MIT",
@@ -22,7 +23,7 @@
 
   "repository" : {
     "type": "git",
-    "url": "https://github.com/github/hubot-scripts.git"
+    "url": "https://github.com/dhfromkorea/hubot-scripts.git"
   },
 
   "dependencies": {
